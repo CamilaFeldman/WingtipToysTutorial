@@ -152,6 +152,7 @@ C:\Users\nt\Desktop\Proyecto2021\WingtipToysTutorial\WingtipToysTutorial\bin\Sql
 C:\Users\nt\Desktop\Proyecto2021\WingtipToysTutorial\WingtipToysTutorial\bin\System.Data.SQLite.xml
 C:\Users\nt\Desktop\Proyecto2021\WingtipToysTutorial\WingtipToysTutorial\bin\System.ValueTuple.xml
 C:\Users\nt\Desktop\Proyecto2021\WingtipToysTutorial\WingtipToysTutorial\bin\System.Data.SqlClient.xml
+<<<<<<< Updated upstream
 C:\Users\nt\Documents\GitHub\WingtipToysTutorial\WingtipToysTutorial\bin\WingtipToysTutorial.dll.config
 C:\Users\nt\Documents\GitHub\WingtipToysTutorial\WingtipToysTutorial\bin\WingtipToysTutorial.dll
 C:\Users\nt\Documents\GitHub\WingtipToysTutorial\WingtipToysTutorial\bin\WingtipToysTutorial.pdb
@@ -306,6 +307,8 @@ C:\Users\nt\Documents\GitHub\WingtipToysTutorial\WingtipToysTutorial\obj\Debug\W
 C:\Users\nt\Documents\GitHub\WingtipToysTutorial\WingtipToysTutorial\obj\Debug\WingtipToysTutorial.csproj.CopyComplete
 C:\Users\nt\Documents\GitHub\WingtipToysTutorial\WingtipToysTutorial\obj\Debug\WingtipToysTutorial.dll
 C:\Users\nt\Documents\GitHub\WingtipToysTutorial\WingtipToysTutorial\obj\Debug\WingtipToysTutorial.pdb
+=======
+>>>>>>> Stashed changes
 C:\Users\Usuario\Documents\Trabajos escolares 2021\GitHub\WingtipToysTutorial\WingtipToysTutorial\bin\WingtipToysTutorial.dll.config
 C:\Users\Usuario\Documents\Trabajos escolares 2021\GitHub\WingtipToysTutorial\WingtipToysTutorial\bin\WingtipToysTutorial.dll
 C:\Users\Usuario\Documents\Trabajos escolares 2021\GitHub\WingtipToysTutorial\WingtipToysTutorial\bin\WingtipToysTutorial.pdb
