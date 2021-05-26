@@ -1,4 +1,5 @@
-﻿using System.Data.Entity;
+﻿using StackExchange.Redis;
+using System.Data.Entity;
 namespace WingtipToys.Models
 {
     public class ProductContext : DbContext
@@ -13,4 +14,5 @@ namespace WingtipToys.Models
         public DbSet<Order> Orders { get; set; }
         public DbSet<OrderDetail> OrderDetails { get; set; }
     }
+
 }
