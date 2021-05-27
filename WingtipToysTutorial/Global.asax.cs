@@ -8,6 +8,8 @@ using System.Web.Security;
 using System.Web.SessionState;
 using System.Data.Entity;
 using WingtipToys.Models;
+using Nemiro.OAuth;
+using Nemiro.OAuth.Clients;
 
 namespace WingtipToysTutorial
 {
@@ -21,5 +23,19 @@ namespace WingtipToysTutorial
             // Initialize the product database.
             Database.SetInitializer(new ProductDatabaseInitializer());
         }
+      
     }
 }
+/*
+ * app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
+            {
+                ClientId = "207441749760-qrrfhq4tabsf003bs6lqbi8l72es8132.apps.googleusercontent.com",
+                ClientSecret = "DYVnUWe4MXrfGniky4DwH4WQ"
+            });
+  OAuthManager.RegisterClient
+            (
+                "google",
+                "207441749760-qrrfhq4tabsf003bs6lqbi8l72es8132.apps.googleusercontent.com",
+                "DYVnUWe4MXrfGniky4DwH4WQ"
+            )
+ */

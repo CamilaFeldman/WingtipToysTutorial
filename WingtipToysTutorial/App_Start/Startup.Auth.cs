@@ -1,4 +1,4 @@
-﻿using EntityFramework.CodeFirst;
+﻿
 using Fluent.Infrastructure.FluentModel;
 using Fluent.Infrastructure.FluentStartup;
 using Microsoft.AspNet.Identity;
@@ -8,9 +8,6 @@ using Microsoft.Owin.Security.Cookies;
 using Microsoft.Owin.Security.Google;
 using Owin;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 
 namespace WingtipToysTutorial
 {
@@ -21,7 +18,7 @@ namespace WingtipToysTutorial
         {
 
             // Configure the db context, user manager and signin manager to use a single instance per request
-            app.CreatePerOwinContext(Fluent.Infrastructure.FluentModel.ApplicationDbContext.Create);
+            app.CreatePerOwinContext(ApplicationDbContext.Create);
             app.CreatePerOwinContext<ApplicationUserManager>(ApplicationUserManager.Create);
             app.CreatePerOwinContext<ApplicationSignInManager>(ApplicationSignInManager.Create);
 
