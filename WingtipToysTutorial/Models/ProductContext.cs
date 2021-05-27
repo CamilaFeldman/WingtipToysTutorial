@@ -1,5 +1,4 @@
-﻿using StackExchange.Redis;
-using System.Data.Entity;
+﻿using System.Data.Entity;
 namespace WingtipToys.Models
 {
     public class ProductContext : DbContext

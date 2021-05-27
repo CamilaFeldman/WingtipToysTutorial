@@ -1,9 +1,18 @@
-﻿using System;
+﻿using EntityFramework.CodeFirst;
+using Fluent.Infrastructure.FluentModel;
+using Fluent.Infrastructure.FluentStartup;
+using Microsoft.AspNet.Identity;
+using Microsoft.AspNet.Identity.Owin;
+using Microsoft.Owin;
+using Microsoft.Owin.Security.Cookies;
+using Microsoft.Owin.Security.Google;
+using Owin;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace WingtipToysTutorial.App_Start
+namespace WingtipToysTutorial
 {
     public class Startup
     {
@@ -12,7 +21,7 @@ namespace WingtipToysTutorial.App_Start
         {
 
             // Configure the db context, user manager and signin manager to use a single instance per request
-            app.CreatePerOwinContext(ApplicationDbContext.Create);
+            app.CreatePerOwinContext(Fluent.Infrastructure.FluentModel.ApplicationDbContext.Create);
             app.CreatePerOwinContext<ApplicationUserManager>(ApplicationUserManager.Create);
             app.CreatePerOwinContext<ApplicationSignInManager>(ApplicationSignInManager.Create);
 
@@ -25,7 +34,7 @@ namespace WingtipToysTutorial.App_Start
                 LoginPath = new PathString("/Account/Login"),
                 Provider = new CookieAuthenticationProvider
                 {
-                    OnValidateIdentity = SecurityStampValidator.OnValidateIdentity<ApplicationUserManager, ApplicationUser>(
+                    OnValidateIdentity = SecurityStampValidator.OnValidateIdentity<ApplicationUserManager, ApplicationUser> (
                         validateInterval: TimeSpan.FromMinutes(30),
                         regenerateIdentity: (manager, user) => user.GenerateUserIdentityAsync(manager))
                 }
@@ -56,8 +65,8 @@ namespace WingtipToysTutorial.App_Start
 
             app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
             {
-                ClientId = "000000000000.apps.googleusercontent.com",
-                ClientSecret = "00000000000"
+                ClientId = "207441749760-qrrfhq4tabsf003bs6lqbi8l72es8132.apps.googleusercontent.com",
+                ClientSecret = "DYVnUWe4MXrfGniky4DwH4WQ"
             });
         }
     }
