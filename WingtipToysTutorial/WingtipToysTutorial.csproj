@@ -535,6 +535,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Logic\PayPalFunctions.cs" />
     <Compile Include="Logic\ShoppingCartActions.cs" />
     <Compile Include="Mapper\ForumMap.cs" />
     <Compile Include="Migrations\ApplicationDbInitializer.cs" />

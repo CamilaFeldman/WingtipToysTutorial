@@ -1,5 +1,4 @@
-﻿
-using Fluent.Infrastructure.FluentModel;
+﻿using Fluent.Infrastructure.FluentModel;
 using Fluent.Infrastructure.FluentStartup;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
