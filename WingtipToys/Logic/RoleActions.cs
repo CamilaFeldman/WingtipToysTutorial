@@ -42,29 +42,26 @@ namespace WingtipToys.Logic
                 UserName = "canEditUser@wingtiptoys.com",
                 Email = "canEditUser@wingtiptoys.com"
             };
-            IdUserResult = userMgr.Create(appUser, ConfigurationManager.AppSettings["AppUserPasswordKey"]);
-
+            //IdUserResult = userMgr.Create(appUser, ConfigurationManager.AppSettings["AppUserPasswordKey"]);
+            IdUserResult = userMgr.Create(appUser, "Pa$$word");
             // If the new "canEdit" user was successfully created, 
             // add the "canEdit" user to the "canEdit" role. 
-            if (!userMgr.IsInRole(userMgr.FindByEmail("canEditUser@wingtiptoys.com").Id, "canEdit"))
+            if (IdUserResult.Succeeded)
+            {
+                IdUserResult = userMgr.AddToRole(appUser.Id, "canEdit");
+                if (!IdUserResult.Succeeded)
+                {
+                    // Handle the error condition if there's a problem adding the user to the role.
+                }
+            }
+            else
+            {
+                // Handle the error condition if there's a problem creating the new user. 
+            }
+            /*if (!userMgr.IsInRole(userMgr.FindByEmail("canEditUser@wingtiptoys.com").Id, "canEdit"))
             {
                 IdUserResult = userMgr.AddToRole(userMgr.FindByEmail("canEditUser@wingtiptoys.com").Id, "canEdit");
-            }
+            }*/
         }
-        /* protected override void Seed(ApplicationDbContext context)
-         {
-             if (!context.Users.Any(u => u.Email == "test@mail.com"))
-             {
-                 var userStore = new UserStore<ApplicationUser>(context);
-                 var manager = new UserManager<ApplicationUser>(userStore);
-                 var user = GetUser();
-                 IdentityResult result = manager.Create(user, "password");
-             }
-         }
-
-         private static ApplicationUser GetUser()
-         {
-             return new ApplicationUser() { UserName = "test@mail.com", Email = "test@mail.com", Name = "Martin Tracey" };
-         }*/
     }
 }
